@@ -7,8 +7,8 @@ let buttonsClicked = 0;
 let currentPlayer = "X";
 infoText.innerHTML = ` It's ${currentPlayer}'s turn`;
 let grid = [["", "", ""], 
-			["", "", ""], 
-			["", "", ""]];
+	    ["", "", ""], 
+	    ["", "", ""]];
 
 function playersTurn(player) {
 	if (player === "X") {
@@ -37,23 +37,23 @@ function checkStatus() {
 	for (let i = 0, j = 0; i < 3; ++i) {
 		if (i === 0 && grid[i][i] !== "") {
 			if ((grid[i][j] === grid[i][j + 1] && grid[i][j + 1] === grid[i][j + 2]) || 
-				(grid[i][j] === grid[i + 1][j] && grid[i + 1][j] === grid[i + 2][j])) {
+			    (grid[i][j] === grid[i + 1][j] && grid[i + 1][j] === grid[i + 2][j])) {
 				infoText.innerHTML = `${grid[i][i]} won!`;
 				gameOver();	
 				return;		
 			}
 		} else if (i === 1 && grid[i][i] !== "") {
 			if ((grid[i - 1][i - 1] === grid[i][i] && grid[i][i] === grid[i + 1][i + 1]) || 
-				(grid[i - 1][j + 2] === grid[i][j + 1] && grid[i][j + 1] === grid[i + 1][j]) || 
-				(grid[i][j] === grid[i][j + 1] && grid[i][j + 1] === grid[i][j + 2]) ||
-				(grid[j][i] === grid[j + 1][i] && grid[j + 1][i] === grid[j + 2][i])) {
+			    (grid[i - 1][j + 2] === grid[i][j + 1] && grid[i][j + 1] === grid[i + 1][j]) || 
+			    (grid[i][j] === grid[i][j + 1] && grid[i][j + 1] === grid[i][j + 2]) || 
+			    (grid[j][i] === grid[j + 1][i] && grid[j + 1][i] === grid[j + 2][i])) {
 				infoText.innerHTML = `${grid[i][i]} won!`;
 				gameOver();
 				return;
 			}
 		} else if (i === 2 && grid[i][i] !== "") {
 			if ((grid[i][j] === grid[i][j + 1] && grid[i][j + 1] === grid[i][j + 2]) || 
-				(grid[j][i] === grid[j + 1][i] && grid[j + 1][i] === grid[j + 2][i])) {
+			    (grid[j][i] === grid[j + 1][i] && grid[j + 1][i] === grid[j + 2][i])) {
 				infoText.innerHTML = `${grid[i][i]} won!`;
 				gameOver();
 				return;
@@ -78,7 +78,7 @@ function resetGame() {
 	btns.forEach(button => button.innerHTML = "");
 	btns.forEach(button => button.disabled = false);
 	grid = [["", "", ""], 
-			["", "", ""], 
-			["", "", ""]];
+		["", "", ""], 
+		["", "", ""]];
 	gameReset.hidden = true;
 }
