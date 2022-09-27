@@ -38,7 +38,7 @@ function checkStatus() {
 		if (i === 0 && grid[i][i] !== "") {
 			if ((grid[i][j] === grid[i][j + 1] && grid[i][j + 1] === grid[i][j + 2]) || 
 			    (grid[i][j] === grid[i + 1][j] && grid[i + 1][j] === grid[i + 2][j])) {
-				infoText.innerHTML = `${grid[i][i]} won!`;
+				infoText.innerHTML = `${grid[i][i]} wins!`;
 				gameOver();	
 				return;		
 			}
@@ -47,14 +47,14 @@ function checkStatus() {
 			    (grid[i - 1][j + 2] === grid[i][j + 1] && grid[i][j + 1] === grid[i + 1][j]) || 
 			    (grid[i][j] === grid[i][j + 1] && grid[i][j + 1] === grid[i][j + 2]) || 
 			    (grid[j][i] === grid[j + 1][i] && grid[j + 1][i] === grid[j + 2][i])) {
-				infoText.innerHTML = `${grid[i][i]} won!`;
+				infoText.innerHTML = `${grid[i][i]} wins!`;
 				gameOver();
 				return;
 			}
 		} else if (i === 2 && grid[i][i] !== "") {
 			if ((grid[i][j] === grid[i][j + 1] && grid[i][j + 1] === grid[i][j + 2]) || 
 			    (grid[j][i] === grid[j + 1][i] && grid[j + 1][i] === grid[j + 2][i])) {
-				infoText.innerHTML = `${grid[i][i]} won!`;
+				infoText.innerHTML = `${grid[i][i]} wins!`;
 				gameOver();
 				return;
 			}
