@@ -1,0 +1,35 @@
+h1 {
+	font-size: 75px;
+	font-style: bold;
+	color: blue;
+	margin-top: 10px;
+	margin-bottom: 40px;
+}
+
+body {
+	width: 25%;
+	margin-left: 550px;
+	background-color: #F5F5F5;
+}
+
+.grid {
+  margin: 5px;
+  display: flex;
+  height: 130px;
+}
+
+.btn-primary {
+  background: lightblue;
+  margin: 5px;
+  color: black;
+  font-weight: bold;
+  font-size: 3.5em;
+  text-align: center;
+  flex: 1 0 0px;
+}
+
+#textInfo {
+	font-size: 40px;
+}
+
+
